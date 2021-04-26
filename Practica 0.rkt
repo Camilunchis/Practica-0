@@ -64,4 +64,81 @@
 ; (= (sqrt 625)(sqr 5))
 
 
+; Imágenes
+
+
+; Para saber cuántos pixeles de ancho tiene
+
+;(image-width .) Tiene 186 pixeles de ancho
+
+; Para saber cuántos pixeles ocupa
+
+;(*(image-width.)(image-height.)) Ocupa en total 35154 pixeles
+
+; También podemos crear nuestras propias imágenes
+
+; (circle 20 "solid" "pink")
+
+
+; 1 - Este ejercicio presenta algunas expresiones con la intención de familiarizarse
+; con imágenes. Modifique estas expresiones para observar el comportamiento
+; de las funciones aquí presentadas.
+
+; a.(circle 100 "solid" "orange")
+
+; b.(rectangle 10 20 "solid" "brown")
+
+; c.(rectangle 20 12 "outline" "magenta")
+
+; d.(overlay (rectangle 20 20 "solid" "blue") (circle 7 "solid" "green"))
+
+; e.(empty-scene 100 100)
+
+; f.(place-image (circle 10 "solid" "blue") 40 50 (empty-scene 100 100))
+
+; g.(+ (image-width (circle 10 "solid" "red")) (image-height(rectangle 10 20 "solid" "blue"))) La suma es igual a 40
+
+
+
+; Funciones y Constantes
+
+; (define P "Neptuno")
+; 
+; (define 1TRES 3)
+; 
+; (define CINCO (+ 1 (* 2 2)))
+; 
+; (define VERDADERO #true)
+; 
+; (define PUNTOROJO (circle 3 "solid" "red"))
+; 
+; Ejemplo
+; 
+; (string-append "Me gustaría viajar a " P) 
+; 
+
+
+; Definiendo funciones
+
+(define (f x) (+ x 1))
+
+(define (doble x) (* x 2))
+
+(define (h x y) (< x (* 2 y)))
+
+(define (cuad-azul x) (square x "solid" "blue"))
+
+
+
+; 1 - Utilizando las definiciones de más arriba, evalúe las siguientes expresiones:
+
+(cuad-azul (doble 10))
+(and (h 2 3) (h 3 4))
+(= (f 1) (doble 1))
+
+
+;2 - Defina una función que recibe dos números x e y, y devuelve la distancia al origen del punto (x,y).
+
+(define (distance x y)(sqrt (sqr y)(sqr x)))
+
 
