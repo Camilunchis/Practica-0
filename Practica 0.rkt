@@ -134,8 +134,14 @@
 (= (f 1) (doble 1))
 
 
-;2 - Defina una función que recibe dos números x e y, y devuelve la distancia al origen del punto (x,y).
-
-(define (distance x y)(sqrt (sqr y)(sqr x)))
+; 2 - Defina una función que recibe dos números x e y, y devuelve la distancia al origen del punto (x,y).
 
 
+; (define (distance x y)(sqrt (+ (sqr y)(sqr x))))
+; (distance 2 2)
+
+; 3 - Defina una función que recibe cuatro números x1, y1, x2 e y2, y devuelve la distancia entre los puntos (x1, y1) y (x2, y2).
+
+(define (distance_puntos x1 y1 x2 y2) (sqrt (+ (sqr (- x2 x1)) (sqr (- y2 y1)))))
+(define (distance_al_cero x y) (distance_puntos x y 0 0))
+(distance_al_cero 2 2)
