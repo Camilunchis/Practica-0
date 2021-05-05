@@ -167,5 +167,37 @@
 ; 8 - Defina una función posible? que, dados tres números positivos a, b, c devuelve #true si es posible construir un triángulo de lados
 ; a, b, c. Caso contrario, devuelve #false. Por ejemplo, (posible? 1 2 5) debe evaluar a #false, pues no es posible construir un triángulo de lado 1, 2 y 5.
 
+(define (posible? a b c) (and (>= (+ b c)a ) (>= (+ a b) c)))
+;(posible? 2 3 4)
+;(posible? 2 8 9)
+;(posible? 10 2 29)
 
+; 9 - Defina una función pitagórica? que dados tres números, devuelve #true si estos forman una terna pitagórica. Caso contrario devuelve #false.
+
+(define (pitagorica? a b c)(=(sqr c) (+(sqr a)(sqr b))))
+(pitagorica? 3 4 5)
+(pitagorica? 11 60 61)
+
+; 10 - Defina una función suma-long, que dados dos strings devuelve la suma de sus logitudes.
+
+(define (suma-long s1 s2)(+ (string-length s1)(string-length s2)))
+(suma-long "Me gusta mucho el helado " "y odio la berenjena")
+
+; 11 - Defina una función comienzaA? que dado un string devuelve #true si el string comienza con "A".
+
+(define (comienzaA? s )
+  (if
+   
+  (or (string=? (substring s 0 1) "A")
+      
+       (string=? (substring s 0 1) "a"))
+  #true #false))
+
+(comienzaA? "Camila")
+(comienzaA? "Alfredo")
+
+; 12 - Defina la función poner- que recibe un string y un número i e inserta "-" en la posición i-ésima del string.
+
+(define (poner- s i) (string-append (substring s 0 i) "-" (substring s i (string-length s))))
+(poner- "Camilunchis" 4)
 
