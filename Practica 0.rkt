@@ -148,8 +148,10 @@
 
 ; 4 - Defina la función vol-cubo que recibe la longitud de la arista de un cubo y calcula su volumen.
 
-(define vol-cubo 15)
-(expt vol-cubo 3)
+(define (vol-cubo-ivan arista) (expt arista 3))
+(vol-cubo-ivan 9)
+;(define vol-cubo 9)
+;(expt vol-cubo 3)
 
 ; 5 - Defina la función area-cubo que recibe la longitud de la arista de un cubo y cálcula su área.
 
@@ -166,8 +168,8 @@
 
 ; 8 - Defina una función posible? que, dados tres números positivos a, b, c devuelve #true si es posible construir un triángulo de lados
 ; a, b, c. Caso contrario, devuelve #false. Por ejemplo, (posible? 1 2 5) debe evaluar a #false, pues no es posible construir un triángulo de lado 1, 2 y 5.
-
-(define (posible? a b c) (and (>= (+ b c)a ) (>= (+ a b) c)))
+;(square 55 "solid" "red")
+(define (posible? a b c) (and (>= (+ c a) b) (and (>= (+ b c)a ) (>= (+ a b) c))))
 ;(posible? 2 3 4)
 ;(posible? 2 8 9)
 ;(posible? 10 2 29)
@@ -200,4 +202,3 @@
 
 (define (poner- s i) (string-append (substring s 0 i) "-" (substring s i (string-length s))))
 (poner- "Camilunchis" 4)
-
