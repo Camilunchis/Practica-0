@@ -145,3 +145,27 @@
 (define (distance_puntos x1 y1 x2 y2) (sqrt (+ (sqr (- x2 x1)) (sqr (- y2 y1)))))
 (define (distance_al_cero x y) (distance_puntos x y 0 0))
 (distance_al_cero 2 2)
+
+; 4 - Defina la función vol-cubo que recibe la longitud de la arista de un cubo y calcula su volumen.
+
+(define vol-cubo 15)
+(expt vol-cubo 3)
+
+; 5 - Defina la función area-cubo que recibe la longitud de la arista de un cubo y cálcula su área.
+
+(define area-cubo 5)
+(*(sqr area-cubo)6)
+
+; 6 - Defina una función metro-pie, que dada una longitud expresada en metros, devuelva su equivalente en pies.
+(define (metro-pie x)(/(* x 3.280)1))
+(metro-pie 4)
+
+; 7 - Defina una función cel-far, que dada una temperatura expresada en Celsius, devuelve su equivalente en Fahrenheit.
+(define (cel-far x)(+ (* x 9/5) 32))
+(cel-far 16)
+
+; 8 - Defina una función posible? que, dados tres números positivos a, b, c devuelve #true si es posible construir un triángulo de lados
+; a, b, c. Caso contrario, devuelve #false. Por ejemplo, (posible? 1 2 5) debe evaluar a #false, pues no es posible construir un triángulo de lado 1, 2 y 5.
+
+
+
