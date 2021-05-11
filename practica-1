@@ -1,0 +1,56 @@
+; :Práctica 1: ;
+
+; :Proposiciones y Condicionales:  :Leyes de Reducción:
+
+; - Ejercicios -
+
+
+; 1. Diremos que una imagen es flaca si su alto es mayor o igual a su ancho.
+; Caso contrario diremos que es gorda. Defina una función que tome como
+; argumento una imagen, y la clasifique en "Flaca" o "Gorda"
+
+
+(define appa .)
+
+(define (gorda? h a)(>=(image-width a)(image-height h)))
+  
+(define (flaca_gorda imagen) (if (>= (image-height imagen) (image-width imagen)) "Flaca" "Gorda"))
+ 
+(flaca_gorda appa)
+
+; 2. Modifique el ejercicio anterior para que ahora clasifique las imágenes en
+; "Flaca", "Gorda" o "Cuadrada" (si su alto es igual a su ancho).
+
+(define (flaca-gorda-cuadrada imagen) (if (=(image-height imagen)(image-width imagen)) "Cuadrada" (if (> (image-height imagen) (image-width imagen)) "Flaca" "Gorda")))
+(define (flaca-gorda-cuadrada2 imagen) (if (=(image-height imagen)(image-width imagen)) "Cuadrada" (flaca_gorda imagen)))
+
+(define (fgc imagen) (cond [(=(image-height imagen)(image-width imagen)) "cuadradita"]
+                           [(> (image-height imagen)(image-width imagen)) "flaquita"]
+                           [(< (image-height imagen)(image-width imagen)) "gordita"]))
+
+(fgc appa)
+(flaca-gorda-cuadrada2 appa)
+
+
+; 3. Defina una función que dado tres números que representan la amplitud
+; de los tres ángulos interiores de un triánguno, devuelva un string que nos
+; indique si es equilátero, isósceles o escaleno.
+
+(define (triangulo a b c) (if (= a b c) "Equilatero" (if (or (= a b) (= b c) (= a c)) "Isoceles" "Escaleno")))
+
+(define (triangulo2 a b c)(cond [(= a b c) "Equilatero"]
+                                [(= a b) "Isosceles"]
+                                [(= a c) "Isosceles"]
+                                [(= b c) "Isosceles"]
+                                [else " Escaleno"]))
+
+(triangulo 60 60 60)
+(triangulo2 70 60 60)
+
+; 4. Modifique el ejercicio anterior para que nos aparezca un string con la
+; palabra error en caso que los valores recibidos como argumento no
+; correspondan a los ángulos de un triángulo. Ayuda: La suma de los
+; ángulos interiores de un triángulo es 180°.
+          
+
+
